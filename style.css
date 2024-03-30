@@ -87,6 +87,141 @@ header {
     overflow: hidden;
 }
 
+.star-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    animation: animateBg 50s linear infinite;
+    z-index: 2;
+  }
+  
+  @keyframes animateBg {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+  
+  .star-background span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 4px;
+    height: 4px;
+    background: #757575;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 0 2px rgba(255, 255, 255, 0.1), 0 0 5px rgba(255, 255, 255, 0.1);
+    animation: animate 3s linear infinite;
+  }
+  
+  .star-background span::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg, #fff, transparent);
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(315deg) translateX(0);
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      transform: rotate(315deg) translateX(-1000px);
+      opacity: 0;
+    }
+  }
+  
+  .star-background span:nth-child(1) {
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 1s;
+  }
+  
+  .star-background span:nth-child(2) {
+    top: 0;
+    right: 80px;
+    left: initial;
+    animation-delay: 0.2s;
+    animation-duration: 3s;
+  }
+  
+  .star-background span:nth-child(3) {
+    top: 80px;
+    right: 0px;
+    left: initial;
+    animation-delay: 0.4s;
+    animation-duration: 2s;
+  }
+  
+  .star-background span:nth-child(4) {
+    top: 0;
+    right: 180px;
+    left: initial;
+    animation-delay: 0.6s;
+    animation-duration: 1.5s;
+  }
+  
+  .star-background span:nth-child(5) {
+    top: 0;
+    right: 400px;
+    left: initial;
+    animation-delay: 0.8s;
+    animation-duration: 2.5s;
+  }
+  
+  .star-background span:nth-child(6) {
+    top: 0;
+    right: 600px;
+    left: initial;
+    animation-delay: 1s;
+    animation-duration: 3s;
+  }
+  
+  .star-background span:nth-child(7) {
+    top: 300px;
+    right: 0px;
+    left: initial;
+    animation-delay: 1.2s;
+    animation-duration: 1.75s;
+  }
+  
+  .star-background span:nth-child(8) {
+    top: 0px;
+    right: 700px;
+    left: initial;
+    animation-delay: 1.4s;
+    animation-duration: 1.25s;
+  }
+  
+  .star-background span:nth-child(9) {
+    top: 0px;
+    right: 1000px;
+    left: initial;
+    animation-delay: 0.75s;
+    animation-duration: 2.25s;
+  }
+  
+  .star-background span:nth-child(10) {
+    top: 0px;
+    right: 450px;
+    left: initial;
+    animation-delay: 2.75s;
+    animation-duration: 2.75s;
+  }
+
 #logo-svg {
     position: absolute;
     top: 40%;
@@ -126,11 +261,13 @@ header {
 /* Set relative positions for parallax images */
 #Background {
     top: -30%;
+    z-index: 1;
 }
 
 #mountain1 {
     top: 4%;
     left: 30%;
+    z-index: 3;
 }
 
 #text {
@@ -140,31 +277,37 @@ header {
 #mountain2 {
     top: -1%;
     left: -5%;
+    z-index: 3;
 }
 
 #hills1 {
     top: 0%;
     left: 0;
+    z-index: 4;
 }
 
 #midground2 {
     top: -17%;
     left: 12%;
+    z-index: 4;
 }
 
 #midground1 {
     top: 0%;
     left: -30%;
+    z-index: 5;
 }
 
 #hills2 {
     top: 8%;
     left: -5%;
+    z-index: 6;
 }
 
 #foreground1 {
     top: 12%;
     left: 5%;
+    z-index: 7;
 }
 
 .sec {

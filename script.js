@@ -63,6 +63,8 @@ logoLink.addEventListener('click', (e) => {
 });
 
 
+
+
 // Staggered scroll animation
 const scrollItems = document.querySelectorAll('.scroll-item');
 const servicesBackground1 = document.querySelector('.services-background-1');
