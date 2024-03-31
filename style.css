@@ -323,9 +323,11 @@ header {
 }
 
 .sec p {
-    font-size: 1rem;
+    font-size: 2rem;
     color: #fef8e8;
-    font-weight: 300;
+    font-weight: 300; 
+    margin: 0 auto; 
+    text-align: justify;
 }
 
 .services {
@@ -493,6 +495,71 @@ header {
     }
 }
 
+.ticker-section {
+    overflow: hidden;
+  }
+  
+  .ticker-section-reverse {
+    transform: translateY(-4rem);
+    overflow: hidden;
+  }
+  
+  .wrapper {
+    max-width: 300%;
+    overflow: hidden;
+  }
+  
+  .marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    padding: 1rem;
+    animation: marquee 20s linear infinite;
+  }
+  
+  .marquee p {
+    display: inline-block;
+    padding: 0 100px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #800020;
+    filter: drop-shadow(6px 6px  #460012);
+  }
+  
+  .marquee-reverse {
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: marquee-reverse 20s linear infinite;
+    padding: 1rem;
+  }
+  
+  .marquee-reverse p {
+    display: inline-block;
+    padding: 0 100px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #800020;
+    filter: drop-shadow(6px 6px  #460012);
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
+  }
+  
+  @keyframes marquee-reverse {
+    0% {
+      transform: translate3d(-50%, 0, 0);
+    }
+    100% {
+      transform: translate3d(0, 0, 0);
+    }
+  }
 .scroll-item {
     opacity: 0;
     animation-duration: 0.8s;
@@ -708,7 +775,7 @@ footer p {
     width: 300px;
     max-width: 30%;
     display: flex;
-    gap: 10px;
+    gap: 20px;
     align-items: center;
 }
 .arrows button{
@@ -915,8 +982,8 @@ hr.new1 {
   }
   
   .contact a {
-    color: #800020;
-    text-decoration: none;
+    color: #7eff9a;
+    text-decoration: underline;
   }
   
   .contact a:hover {

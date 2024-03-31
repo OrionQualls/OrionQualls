@@ -25,19 +25,20 @@ window.addEventListener('scroll', () => {
     // Update the parallax elements based on the scroll percentage
     background.style.transform = `translateY(${scrollPercent * -100}%)`;
     
-    mountain1.style.transform = `translate(${scrollPercent * -70}%, ${scrollPercent * -70}%)`;
+    mountain1.style.transform = `translate(${scrollPercent * -70}%, ${scrollPercent * -170}%)`;
 
     mountain2.style.transform = `translate(${scrollPercent * -50}%, ${scrollPercent * 50}%)`;
 
-    hills1.style.transform = `translate(${scrollPercent * -5}%, ${scrollPercent * -20}%)`;
+    hills1.style.transform = `translate(${scrollPercent * -20}%, ${scrollPercent * -180}%)`;
 
-    midground2.style.transform = `translate(${scrollPercent * 10}%, ${scrollPercent * -16}%)`;
+    midground2.style.transform = `translate(${scrollPercent * 40}%, ${scrollPercent * -60}%)`;
 
-    midground1.style.transform = `translate(${scrollPercent * -7}%, ${scrollPercent * -12}%)`;
+    midground1.style.transform = `translate(${scrollPercent * -10}%, ${scrollPercent * -40}%)`;
 
-    hills2.style.transform = `translate(${scrollPercent * -20}%, ${scrollPercent * -6}%)`;
+    hills2.style.transform = `translate(${scrollPercent * -90}%, ${scrollPercent * -6}%)`;
 
-    foreground1.style.transform = `translate(${scrollPercent * 20}%, ${scrollPercent * 1}%)`;
+    foreground1.style.transform = `translate(${scrollPercent * 100}%, ${scrollPercent * 1}%)`;
+    
   // Fade out the SVG logo on scroll
   const scrollPosition = window.scrollY;
   const fadeOutDistance = 500; // Adjust this value to control the fade-out distance
@@ -46,7 +47,7 @@ window.addEventListener('scroll', () => {
     logoSVG.style.opacity = 0;
     circularLogo.style.opacity = 1;
   } else {
-    const opacity = 1 - scrollPosition / fadeOutDistance;
+    const opacity = 1 - scrollPosition / fadeOutDistance*2;
     logoSVG.style.opacity = opacity;
     circularLogo.style.opacity = 1 - opacity;
   }
