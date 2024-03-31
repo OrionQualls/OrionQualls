@@ -56,6 +56,7 @@ header {
     padding: 0.625rem;
     display: inline-flex;
     align-items: center;
+    filter: drop-shadow(10px 10px  black);
 }
 
 .navigation a {
@@ -239,6 +240,7 @@ header {
   #circular-logo {
     opacity: 0;
     transition: opacity 0.5s ease-in-out;
+    filter: drop-shadow(4px 8px  black);
   }
 
 #text {
