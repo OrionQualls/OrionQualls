@@ -322,13 +322,19 @@ header {
     font-size: 3rem;
     color: #fef8e8;
     margin-bottom: 0.625rem;
+    padding-left: 7rem;
+    padding-right: 6rem;
+    padding-bottom: 2rem;
 }
 
 .sec p {
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: #fef8e8;
     font-weight: 300; 
     margin: 0 auto; 
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-bottom: 5rem;
     text-align: justify;
 }
 
